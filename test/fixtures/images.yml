@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  path: MyString
+  md5: MyString
+  original_filename: MyString
+  content_type: MyString
+
+two:
+  path: MyString
+  md5: MyString
+  original_filename: MyString
+  content_type: MyString
