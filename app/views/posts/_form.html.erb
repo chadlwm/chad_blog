@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, placeholder: '恭迎主人大驾光临', class: 'post_title' %>
   </div>
   <%= f.text_area :raw_content, style: 'display:none' %>
-  <div id="postEditor"><%= @post.raw_content || '# hi, chad' %></div>
+  <div id="postEditor"><%= @post.raw_content || '# hi, Master' %></div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-primary' %>
   </div>
 <% end %>
 
