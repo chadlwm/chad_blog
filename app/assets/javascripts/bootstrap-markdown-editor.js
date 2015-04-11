@@ -78,7 +78,35 @@
 
   function f(b, c) {
     var d = "";
-    return d += '<div class="md-loading"><span class="md-icon-container"><span class="md-icon"></span></span></div>', d += '<div class="md-toolbar">', d += '<div class="btn-toolbar">', d += '<div class="btn-group">', d += '<button type="button" data-mdtooltip="tooltip" title="' + c.label.btnHeader1 + '" class="md-btn btn btn-sm btn-default" data-btn="h1">H1</button>', d += '<button type="button" data-mdtooltip="tooltip" title="' + c.label.btnHeader2 + '" class="md-btn btn btn-sm btn-default" data-btn="h2">H2</button>', d += '<button type="button" data-mdtooltip="tooltip" title="' + c.label.btnHeader3 + '" class="md-btn btn btn-sm btn-default" data-btn="h3">H3</button>', d += "</div>", d += '<div class="btn-group">', d += '<button type="button" data-mdtooltip="tooltip" title="' + c.label.btnBold + '" class="md-btn btn btn-sm btn-default" data-btn="bold"><span class="glyphicon glyphicon-bold"></span></button>', d += '<button type="button" data-mdtooltip="tooltip" title="' + c.label.btnItalic + '" class="md-btn btn btn-sm btn-default" data-btn="italic"><span class="glyphicon glyphicon-italic"></span></button>', d += "</div>", d += '<div class="btn-group">', d += '<button type="button" data-mdtooltip="tooltip" title="' + c.label.btnLink + '" class="md-btn btn btn-sm btn-default" data-btn="link"><span class="glyphicon glyphicon-link"></span></button>', d += '<button type="button" data-mdtooltip="tooltip" title="' + c.label.btnImage + '" class="md-btn btn btn-sm btn-default" data-btn="image"><span class="glyphicon glyphicon-picture"></span></button>', c.imageUpload === !0 && (d += '<button type="button" data-mdtooltip="tooltip" title="' + c.label.btnUpload + '" class="btn btn-sm btn-default md-btn-file"><span class="glyphicon glyphicon-upload"></span><input class="md-input-upload" type="file" multiple accept=".jpg,.jpeg,.png,.gif"></button>'), d += "</div>", c.fullscreen === !0 && (d += '<div class="btn-group pull-right">', d += '<button type="button" class="md-btn btn btn-sm btn-default" data-btn="fullscreen"><span class="glyphicon glyphicon-fullscreen"></span> ' + c.label.btnFullscreen + "</button>", d += "</div>"), c.preview === !0 && (d += '<div class="btn-group pull-right">', d += '<button type="button" class="md-btn btn btn-sm btn-default btn-edit active" data-btn="edit"><span class="glyphicon glyphicon-pencil"></span> ' + c.label.btnEdit + "</button>", d += '<button type="button" class="md-btn btn btn-sm btn-default btn-preview" data-btn="preview"><span class="glyphicon glyphicon-eye-open"></span> ' + c.label.btnPreview + "</button>", d += "</div>"), d += "</div>", d += "</div>", d += '<div class="md-editor">' + a.trim(b) + "</div>", d += '<div class="md-preview" style="display:none"></div>'
+    return d += '<div class="md-loading"><span class="md-icon-container"><span class="md-icon"></span></span></div>',
+    d += '<div class="md-toolbar">',
+    d += '<div class="btn-toolbar">',
+    d += '<div class="btn-group">',
+    d += '<button type="button" data-mdtooltip="tooltip" title="' + c.label.btnHeader1 + '" class="md-btn btn btn-sm btn-default" data-btn="h1">H1</button>',
+    d += '<button type="button" data-mdtooltip="tooltip" title="' + c.label.btnHeader2 + '" class="md-btn btn btn-sm btn-default" data-btn="h2">H2</button>',
+    d += '<button type="button" data-mdtooltip="tooltip" title="' + c.label.btnHeader3 + '" class="md-btn btn btn-sm btn-default" data-btn="h3">H3</button>',
+    d += "</div>",
+    d += '<div class="btn-group">',
+    d += '<button type="button" data-mdtooltip="tooltip" title="' + c.label.btnBold + '" class="md-btn btn btn-sm btn-default" data-btn="bold"><span class="glyphicon glyphicon-bold"></span></button>',
+    d += '<button type="button" data-mdtooltip="tooltip" title="' + c.label.btnItalic + '" class="md-btn btn btn-sm btn-default" data-btn="italic"><span class="glyphicon glyphicon-italic"></span></button>',
+    d += "</div>",
+    d += '<div class="btn-group">',
+    d += '<button type="button" data-mdtooltip="tooltip" title="' + c.label.btnLink + '" class="md-btn btn btn-sm btn-default" data-btn="link"><span class="glyphicon glyphicon-link"></span></button>',
+    d += '<button type="button" data-mdtooltip="tooltip" title="' + c.label.btnImage + '" class="md-btn btn btn-sm btn-default" data-btn="image"><span class="glyphicon glyphicon-picture"></span></button>', c.imageUpload === !0 && (
+    d += '<button type="button" data-mdtooltip="tooltip" title="' + c.label.btnUpload + '" class="btn btn-sm btn-default md-btn-file"><span class="glyphicon glyphicon-upload"></span><input class="md-input-upload" type="file" multiple accept=".jpg,.jpeg,.png,.gif"></button>'),
+    d += "</div>", c.fullscreen === !0 && (
+    d += '<div class="btn-group pull-right">',
+    d += '<button type="button" class="md-btn btn btn-sm btn-default" data-btn="adjust"><span class="glyphicon glyphicon-adjust"></span></button>',
+    d += '<button type="button" class="md-btn btn btn-sm btn-default" data-btn="fullscreen"><span class="glyphicon glyphicon-fullscreen"></span> ' + c.label.btnFullscreen + "</button>",
+    d += "</div>"), c.preview === !0 && (
+    d += '<div class="btn-group pull-right">',
+    d += '<button type="button" class="md-btn btn btn-sm btn-default btn-edit active" data-btn="edit"><span class="glyphicon glyphicon-pencil"></span> ' + c.label.btnEdit + "</button>",
+    d += '<button type="button" class="md-btn btn btn-sm btn-default btn-preview" data-btn="preview"><span class="glyphicon glyphicon-eye-open"></span> ' + c.label.btnPreview + "</button>",
+    d += "</div>"),
+    d += "</div>",
+    d += "</div>",
+    d += '<div class="md-editor">' + a.trim(b) + "</div>",
+    d += '<div class="md-preview" style="display:none"></div>'
   }
   var g = {
     init: function(g) {
@@ -124,6 +152,16 @@
         "h1" === b ? e(p, "#") : "h2" === b ? e(p, "##") : "h3" === b ? e(p, "###") : "bold" === b ? p.execCommand("bold") : "italic" === b ? p.execCommand("italic") : "link" === b ? p.execCommand("link") : "image" === b ? "" === d ? o.insertSnippet(p, "![${1:text}](http://$2)") : o.insertSnippet(p, "![" + d + "](http://$1)") : "edit" === b ? (j = !1, m.hide(), l.show(), i.find(".btn-edit").addClass("active"), i.find(".btn-preview").removeClass("active"), k === !0 && c(l)) : "preview" === b ? (j = !0, m.html('<p style="text-align:center; font-size:16px">' + h.label.loading + "...</p>"), h.onPreview(p.getSession().getValue(), function(a) {
           m.html(a)
         }), l.hide(), m.show(), i.find(".btn-preview").addClass("active"), i.find(".btn-edit").removeClass("active"), k === !0 && c(m)) : "fullscreen" === b && (k === !0 ? (k = !1, a("body, html").removeClass("md-body-fullscreen"), i.removeClass("md-fullscreen"), l.css("height", h.height), m.css("height", h.height)) : (k = !0, a("body, html").addClass("md-body-fullscreen"), i.addClass("md-fullscreen"), c(j === !1 ? l : m)), p.resize()), p.focus()
+      }),$("button[data-btn='adjust']").click(function(){
+        var obj = $("button[data-btn='adjust']");
+        if(obj.hasClass("active")){
+            p.setTheme("ace/theme/" + h.theme)
+           $("button[data-btn='adjust']").removeClass("active");
+        }
+        else{
+           p.setTheme("ace/theme/" + h.theme_second)
+           $("button[data-btn='adjust']").addClass("active");
+        }
       }), this
     },
     content: function() {
@@ -138,6 +176,7 @@
     height: "400px",
     fontSize: "14px",
     theme: "tomorrow",
+    theme_second: "tomorrow_night",
     fullscreen: !0,
     imageUpload: !1,
     uploadPath: "",
