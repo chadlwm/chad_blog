@@ -24,9 +24,22 @@
 <script type="text/javascript">
     $(document).ready(function(){
       $('#myEditor').markdownEditor({
-        imageUpload: true, // Activate the option
-        uploadPath: '/images', // Path of the server side script that receive the files
-        preview: true
+        imageUpload: true,
+        uploadPath: '/images',
+        preview: true,
+        onPreview: function (content, callback) {
+          $.ajax({
+            url: '<%= convert_posts_path %>',
+            type: 'POST',
+            dataType: 'html',
+            data: {content: content},
+          })
+          .done(function(result) {
+            // Return the html:
+            callback(result);
+          });
+        }
+
       });
     });
 </script>

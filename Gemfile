@@ -20,6 +20,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem "quiet_assets"
+gem 'github-markdown'
 
 group :development, :test do
   gem 'pry-nav', '~> 0.2.4'
