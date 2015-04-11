@@ -103,7 +103,7 @@
         height: h.height
       });
       var o, p = ace.edit(l[0]);
-      return p.setTheme("ace/theme/" + h.theme), p.getSession().setMode("ace/mode/markdown"), p.getSession().setUseWrapMode(!0), p.setHighlightActiveLine(!0), p.setShowPrintMargin(!0), p.renderer.setShowGutter(!0), ace.config.loadModule("ace/ext/language_tools", function() {
+      return p.setTheme("ace/theme/" + h.theme), p.getSession().setMode("ace/mode/markdown"), p.getSession().setUseWrapMode(!0), p.setHighlightActiveLine(!0), p.setShowPrintMargin(!1), p.renderer.setShowGutter(!0), ace.config.loadModule("ace/ext/language_tools", function() {
         o = ace.require("ace/snippets").snippetManager, d(p, o)
       }), h.imageUpload && (i.find(".md-input-upload").on("change", function() {
         var c = a(this).get(0).files;
