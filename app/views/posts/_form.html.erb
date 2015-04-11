@@ -1,4 +1,4 @@
-<%= form_for(@post) do |f| %>
+<%= form_for @post, html:{onsubmit: 'return getMarkdownContent(this)', id:'postEditorForm'} do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -15,7 +15,8 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
-  <div id="myEditor"># hi, chad!</div>
+  <%= f.text_area :raw_content, style: 'display:none' %>
+  <div id="postEditor"><%= @post.raw_content || '# hi, chad' %></div>
   <div class="actions">
     <%= f.submit %>
   </div>
@@ -23,7 +24,7 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-      $('#myEditor').markdownEditor({
+      $('#postEditor').markdownEditor({
         imageUpload: true,
         uploadPath: '/images',
         preview: true,
@@ -44,4 +45,9 @@
 
       });
     });
+
+    function getMarkdownContent(form){
+      $("#post_raw_content").val($('#postEditor').markdownEditor('content'));
+      return true;
+    }
 </script>

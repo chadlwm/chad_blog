@@ -6,13 +6,8 @@
 </p>
 
 <p>
-  <strong>Raw content:</strong>
-  <%= @post.raw_content %>
-</p>
-
-<p>
   <strong>Html content:</strong>
-  <%= @post.html_content %>
+  <%= raw @post.html_content %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

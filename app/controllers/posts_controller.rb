@@ -59,6 +59,8 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :raw_content, :html_content)
+      result = params.require(:post).permit(:title, :raw_content)
+      result[:html_content] = GitHub::Markdown.render_gfm(result[:raw_content]).html_safe
+      result
     end
 end
