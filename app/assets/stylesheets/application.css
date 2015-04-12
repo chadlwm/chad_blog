@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+pre[class*='language-'] > code[data-language] {
+  overflow: initial;
+}

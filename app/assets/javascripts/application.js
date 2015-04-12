@@ -17,3 +17,4 @@
 //= require bootstrap
 //= require ./ace/ace
 //= require bootstrap-markdown-editor
+//= require prism.js
