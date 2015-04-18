@@ -45,17 +45,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <%= link_to Settings.site, root_path, class: 'navbar-brand'%>
+        <%= link_to Settings.site, admin_root_path, class: 'navbar-brand'%>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+            <li><%= link_to "Posts", admin_posts_path %></li>
           </ul>
           <ul class="nav nav-list" style="float:right;">
               <% if current_user %>
-                <li><%= link_to current_user.email, "/path1"  %></li>
-                <li><%= link_to "退出", destroy_user_session_path, method: :delete  %></li>
+                <li><%= link_to current_user.email, "/#", class: 'inline-block'  %>
+                |
+                <%= link_to "退出", destroy_user_session_path, method: :delete, class: 'inline-block' %></li>
               <% end %>
             </ul>
         </div>

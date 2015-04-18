@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class Admin::PostsController < Admin::BaseController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index

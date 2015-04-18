@@ -1,1 +1,1 @@
-settings.site = '北国的雨'
+settings.site = 'Hacker Man'

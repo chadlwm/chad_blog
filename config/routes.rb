@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
 
-  resources :posts do
-    post :convert, on: :collection
-  end
-  resources :images
-
   root 'posts#index'
+
+  namespace :admin, path: '/admin' do
+    root to: redirect('/admin/posts')
+    resources :images
+    resources :posts do
+      post :convert, on: :collection
+    end
+  end
+
+  devise_for :users, controllers: { sessions: "users/sessions" }, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

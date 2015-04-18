@@ -19,6 +19,8 @@ gem "less-rails"
 gem 'bootstrap-on-rails'
 gem "quiet_assets"
 gem 'github-markdown'
+gem 'devise'
+gem 'slim-rails'
 
 group :development, :test do
   gem 'pry-nav', '~> 0.2.4'

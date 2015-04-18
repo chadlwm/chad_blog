@@ -1,0 +1,22 @@
+= link_to 'New Post', new_admin_post_path, class: 'btn btn-primary'
+
+table.table.table-hover
+  thead
+    tr
+      th Title
+      th Created_At
+      th operations
+      th Author
+
+  tbody
+    - @posts.each do |post|
+      tr
+        td = link_to post.title, [:admin, post], target: '_blank'
+        td = post.created_at
+        td
+          = link_to edit_admin_post_path(post) do
+            i.glyphicon.glyphicon-pencil
+          |&nbsp;&nbsp;
+          = link_to [:admin, post], method: :delete, data: { confirm: "Are you sure to delete '#{post.title}' ?" } do
+            i.glyphicon.glyphicon-remove
+        td = 'chad'
