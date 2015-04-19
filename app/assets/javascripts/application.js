@@ -31,3 +31,9 @@
 //= require ./ace/ace
 //= require bootstrap-markdown-editor
 //= require prism.js
+//= require ./timeago/timeago
+//= require ./timeago/timeago.zh-cn
+
+$(document).ready(function(ret, status){
+    $(".timeago").timeago();
+});

@@ -13,17 +13,17 @@ table.table.table-hover
   tbody
     - @columns.each do |column|
       tr
-        td = column.name
-        td = column.slug
+        td = link_to column.name, [:admin, column]
+        td = link_to column.slug, [:admin, column]
         td = column.introduce
         td = link_to column.posts_count.to_i, admin_column_posts_path(column)
         td = column.created_at
         td
-          =link_to 'Show', [:admin, column]
-          |&nbsp;|&nbsp;
-          = link_to 'Edit', edit_admin_column_path(column)
-          |&nbsp;|&nbsp;
-          = link_to 'Destroy', [:admin, column], data: {:confirm => 'Are you sure?'}, :method => :delete
+          = link_to edit_admin_column_path(column) do
+            i.glyphicon.glyphicon-pencil
+          |&nbsp;&nbsp;
+          = link_to [:admin, column], data: {:confirm => 'Are you sure?'}, :method => :delete do
+            i.glyphicon.glyphicon-remove
 
 br
 

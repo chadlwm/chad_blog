@@ -21,15 +21,18 @@ gem 'github-markdown'
 gem 'devise'
 gem 'slim-rails'
 
+#model
+gem "acts-as-taggable-on"
+
 group :development, :test do
   gem 'pry-nav', '~> 0.2.4'
   gem "pry-doc"
   gem "quiet_assets"
   gem "annotate"
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
 end
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

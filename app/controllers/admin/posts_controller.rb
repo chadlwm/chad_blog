@@ -3,7 +3,7 @@ class Admin::PostsController < Admin::BaseController
 
   def index
     @posts = Column.find(params[:column_id]).posts rescue Post
-    @posts = @posts.order("created_at")
+    @posts = @posts.order("created_at desc")
   end
 
   def show
@@ -21,7 +21,7 @@ class Admin::PostsController < Admin::BaseController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.html { redirect_to [:admin, @post], notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -33,7 +33,7 @@ class Admin::PostsController < Admin::BaseController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        format.html { redirect_to [:admin, @post], notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }
@@ -60,7 +60,7 @@ class Admin::PostsController < Admin::BaseController
     end
 
     def post_params
-      result = params.require(:post).permit(:title, :raw_content)
+      result = params.require(:post).permit(:title, :raw_content, :slug, :tag_list)
       result[:html_content] = GitHub::Markdown.render_gfm(result[:raw_content]).html_safe
       result
     end

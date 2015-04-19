@@ -7,10 +7,16 @@
       - @post.errors.full_messages.each do |message|
         li = message
 
-  div.field
-    = f.text_field :title, placeholder: 'Welcome, Hacker Man', class: 'post_title'
+  div.form-group
+    = f.text_field :title, placeholder: 'title, like: Welcome, Hacker Man', class: 'post_title'
+  div.form-group
+    = f.text_field :slug, placeholder: 'slug, for example: hacker_man', class: 'post_title'
+
   = f.text_area :raw_content, style: 'display:none'
   div#postEditor = @post.raw_content || '# Hi, Hacker Man'
+
+  div.form-group
+    = f.text_field :tag_list, placeholder: 'tag list with separator of \";\" ', class: 'post_title'
 
   div.actions
     = f.submit class: 'btn btn-primary'
