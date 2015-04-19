@@ -17,7 +17,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem "less-rails"
 gem 'bootstrap-on-rails'
-gem "quiet_assets"
 gem 'github-markdown'
 gem 'devise'
 gem 'slim-rails'
@@ -25,6 +24,8 @@ gem 'slim-rails'
 group :development, :test do
   gem 'pry-nav', '~> 0.2.4'
   gem "pry-doc"
+  gem "quiet_assets"
+  gem "annotate"
 end
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

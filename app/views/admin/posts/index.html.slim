@@ -4,6 +4,7 @@ table.table.table-hover
   thead
     tr
       th Title
+      th Column
       th Created_At
       th operations
       th Author
@@ -12,6 +13,7 @@ table.table.table-hover
     - @posts.each do |post|
       tr
         td = link_to post.title, [:admin, post], target: '_blank'
+        td = link_to post.column.try(:name), admin_column_posts_path(post.column)
         td = post.created_at
         td
           = link_to edit_admin_post_path(post) do

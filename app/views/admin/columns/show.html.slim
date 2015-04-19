@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @column.name
+p
+  strong Slug:
+  = @column.slug
+p
+  strong Introduce:
+  = @column.introduce
+
+= link_to 'Edit', edit_admin_column_path(@column)
+'|
+= link_to 'Back', admin_columns_path

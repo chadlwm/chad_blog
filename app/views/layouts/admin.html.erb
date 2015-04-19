@@ -48,7 +48,8 @@
         <%= link_to Settings.site, admin_root_path, class: 'navbar-brand'%>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Posts", admin_posts_path %></li>
+            <li class="<%= nav_active :columns, controller_name %>"><%= link_to "Columns", admin_columns_path %></li>
+            <li class="<%= nav_active :posts, controller_name %>"><%= link_to "Posts", admin_posts_path %></li>
           </ul>
           <ul class="nav nav-list" style="float:right;">
               <% if current_user %>

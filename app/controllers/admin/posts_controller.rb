@@ -2,7 +2,8 @@ class Admin::PostsController < Admin::BaseController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = Column.find(params[:column_id]).posts rescue Post
+    @posts = @posts.order("created_at")
   end
 
   def show

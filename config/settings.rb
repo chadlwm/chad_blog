@@ -1,1 +1,1 @@
-settings.site = 'Hacker Man'
+settings.site = 'Geeker Man'

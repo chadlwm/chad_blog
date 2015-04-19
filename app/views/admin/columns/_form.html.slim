@@ -1,0 +1,18 @@
+= form_for [:admin, @column] do |f|
+  - if @column.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@column.errors.count, "error")} prohibited this column from being saved:"
+      ul
+        - @column.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :slug
+    = f.text_field :slug
+  .field
+    = f.label :introduce
+    = f.text_area :introduce
+  .actions = f.submit

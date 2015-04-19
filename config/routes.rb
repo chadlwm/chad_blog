@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   namespace :admin, path: '/admin' do
     root to: redirect('/admin/posts')
     resources :images
+    resources :columns do
+      resources :posts
+    end
     resources :posts do
       post :convert, on: :collection
     end
