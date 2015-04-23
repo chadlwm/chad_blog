@@ -45,12 +45,8 @@ html lang="en"
         = link_to Settings.site, admin_root_path, class: 'navbar-brand'
         div.navbar-collapse.collapse.navbar-responsive-collapse
           ul.nav.navbar-nav
-            li class="#{ nav_active :columns, controller_name }"
-              = link_to "Columns", admin_columns_path
             li class="#{ nav_active :posts, controller_name }"
-              = link_to "Posts", admin_posts_path
-            li
-              = link_to "主页", root_path
+              = link_to "Posts", posts_path
           ul.nav.nav-list style="float:right;"
             - if current_user
               li

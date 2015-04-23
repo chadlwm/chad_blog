@@ -22,3 +22,8 @@ table.table.table-hover
           = link_to [:admin, post], method: :delete, data: { confirm: "Are you sure to delete '#{post.title}' ?" } do
             i.glyphicon.glyphicon-remove
         td = 'chad'
+
+javascript:
+  $(document).ready(function(ret, status){
+      $(".timeago").timeago();
+  });
