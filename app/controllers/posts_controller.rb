@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   end
 
   def show
+  	@tags = Post.tag_counts_on(:tags)
   end
 
   private

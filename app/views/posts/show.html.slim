@@ -1,8 +1,10 @@
-h1.page-header = @post.title
+div.col-lg-9
+  h1.page-header = @post.title
 
-div.post-content
-  = raw @post.html_content
+  div.post-content
+    = raw @post.html_content
 
-= link_to 'Edit', edit_post_path(@post)
-||
-= link_to 'Back', posts_path
+  = link_to 'Edit', edit_admin_post_path(@post)
+
+div.col-lg-3
+  = render 'tags'
