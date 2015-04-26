@@ -12,4 +12,22 @@ module ApplicationHelper
       raw "<time class=\"timeago\" title=\"#{raw_time}\" datetime=\"#{raw_time}\"></time>"
     end
   end
+
+  def show_flashes
+    result_html = []
+    css = {error: 'danger', notice: 'info'}
+    flash.each do |key, msg|
+      html =<<-HTML
+        <div class='alert alert-#{css[key.to_sym]} alert-dismissible fade in' role='alert'>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          #{msg}
+        </div>
+      HTML
+
+      result_html << html
+    end
+    raw result_html.join
+  end
 end
