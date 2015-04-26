@@ -37,6 +37,11 @@ GEM
     bootstrap-on-rails (3.3.1)
       less-rails
     builder (3.2.2)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -79,6 +84,8 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.4.3)
+    mini_magick (3.7.0)
+      subexec (~> 0.2.1)
     minitest (5.5.1)
     multi_json (1.11.0)
     orm_adapter (0.5.0)
@@ -147,6 +154,7 @@ GEM
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
     sqlite3 (1.3.10)
+    subexec (0.2.3)
     temple (0.7.5)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
@@ -172,6 +180,7 @@ DEPENDENCIES
   acts-as-taggable-on
   annotate
   bootstrap-on-rails
+  carrierwave
   coffee-rails (~> 4.0.0)
   devise
   fume-settable
@@ -179,6 +188,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   less-rails
+  mini_magick
   pry-doc
   pry-nav (~> 0.2.4)
   quiet_assets

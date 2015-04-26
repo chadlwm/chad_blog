@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150419152758) do
+ActiveRecord::Schema.define(version: 20150426173920) do
 
   create_table "columns", force: true do |t|
     t.string   "name"
@@ -23,12 +23,10 @@ ActiveRecord::Schema.define(version: 20150419152758) do
   end
 
   create_table "images", force: true do |t|
-    t.string   "path"
     t.string   "md5"
-    t.string   "original_filename"
-    t.string   "content_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "posts", force: true do |t|
@@ -40,6 +38,7 @@ ActiveRecord::Schema.define(version: 20150419152758) do
     t.integer  "user_id"
     t.integer  "column_id"
     t.string   "slug"
+    t.string   "cover"
   end
 
   create_table "taggings", force: true do |t|

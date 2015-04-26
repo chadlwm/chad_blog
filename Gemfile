@@ -20,6 +20,8 @@ gem 'bootstrap-on-rails'
 gem 'github-markdown'
 gem 'devise'
 gem 'slim-rails'
+gem 'carrierwave'
+gem 'mini_magick'
 
 #model
 gem "acts-as-taggable-on"

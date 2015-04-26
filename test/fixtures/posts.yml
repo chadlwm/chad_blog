@@ -11,6 +11,7 @@
 #  user_id      :integer
 #  column_id    :integer
 #  slug         :string(255)
+#  cover        :string(255)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

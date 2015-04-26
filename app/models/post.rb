@@ -11,6 +11,7 @@
 #  user_id      :integer
 #  column_id    :integer
 #  slug         :string(255)
+#  cover        :string(255)
 #
 
 class Post < ActiveRecord::Base
@@ -21,4 +22,5 @@ class Post < ActiveRecord::Base
   belongs_to :author, class_name: User.to_s, foreign_key: 'user_id'
 
   acts_as_taggable
+  mount_uploader :cover, ImageUploader
 end
