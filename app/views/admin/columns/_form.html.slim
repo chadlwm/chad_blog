@@ -1,4 +1,4 @@
-= form_for [:admin, @column], class: 'form-horizontal' do |f|
+= simple_form_for [:admin, @column], class: 'form-horizontal' do |f|
   - if @column.errors.any?
     #error_explanation
       h2 = "#{pluralize(@column.errors.count, "error")} prohibited this column from being saved:"
@@ -6,14 +6,7 @@
         - @column.errors.full_messages.each do |message|
           li = message
 
-  div.form-group
-    = f.label :name, class: 'col-sm-2 control-label'
-    = f.text_field :name, class: 'col-sm-8'
-  div.form-group
-    = f.label :slug, class: 'col-sm-2 control-label'
-    = f.text_field :slug, class: 'col-sm-8'
-  div.form-group
-    = f.label :introduce, class: 'col-sm-2 control-label'
-    = f.text_area :introduce, class: 'col-sm-8'
-  div.form-group.actions
-    = f.submit
+  = f.input :name, input_html:{ class: 'form-control' }
+  = f.input :slug, input_html:{ class: 'form-control' }
+  = f.input :introduce, :input_html => { 'rows' => 3, class: 'form-control'}
+  = f.button :submit, data: { disable_with: "submitting..." }, class:"btn btn-primary", style: 'margin-top: 10px;'

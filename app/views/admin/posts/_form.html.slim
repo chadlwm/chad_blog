@@ -1,4 +1,4 @@
-= form_for [:admin, @post], html:{onsubmit: 'return getMarkdownContent(this)', id:'postEditorForm'} do |f|
+= simple_form_for [:admin, @post], html:{onsubmit: 'return getMarkdownContent(this)', id:'postEditorForm', class: 'form-horizontal'} do |f|
   - if @post.errors.any?
     div#error_explanation
       h2 = pluralize(@post.errors.count, "error")
@@ -7,19 +7,17 @@
       - @post.errors.full_messages.each do |message|
         li = message
 
-  div.form-group
-    = f.text_field :title, placeholder: 'title, like: Welcome, Hacker Man', class: 'post_title'
-  div.form-group
-    = f.text_field :slug, placeholder: 'slug, for example: hacker_man', class: 'post_title'
+  = f.input :title, input_html:{ class: 'form-control' }
+  = f.input :slug, input_html:{ class: 'form-control' }
 
-  = f.text_area :raw_content, style: 'display:none'
+  = f.input :raw_content, wrapper_html:{style: 'display:none'}
   div#postEditor = @post.raw_content || '# Hi, Hacker Man'
 
-  div.form-group
-    = f.text_field :tag_list, placeholder: 'tag list with separator of \",\" ', class: 'post_title'
+  = f.input :tag_list, hint: 'tag list with separator of “,” ', input_html:{ class: 'form-control' }
 
-  div.actions
-    = f.submit class: 'btn btn-primary'
+  = f.input :source_type, label: "Column", collection: Column.order('id asc').map{|column| [column.name, column.id]}, selected: "lead", input_html:{ class: 'form-control' }
+
+  = f.button :submit, data: { disable_with: "submitting..." }, class:"btn btn-primary", style: 'margin-top: 10px;'
 
 javascript:
   $(document).ready(function(){

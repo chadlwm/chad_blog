@@ -4,7 +4,7 @@ class Admin::ColumnsController < Admin::BaseController
   respond_to :html
 
   def index
-    @columns = Column.all
+    @columns = Column.order("created_at desc")
     respond_with([:admin, @columns])
   end
 

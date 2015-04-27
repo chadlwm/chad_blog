@@ -26,6 +26,9 @@ gem 'mini_magick'
 #model
 gem "acts-as-taggable-on"
 
+# views
+gem "simple_form"
+
 group :development, :test do
   gem 'pry-nav', '~> 0.2.4'
   gem "pry-doc"
