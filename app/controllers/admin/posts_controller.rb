@@ -33,7 +33,7 @@ class Admin::PostsController < Admin::BaseController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to admin_posts_path, notice: 'Post was successfully updated.' }
+        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }
@@ -60,7 +60,7 @@ class Admin::PostsController < Admin::BaseController
     end
 
     def post_params
-      result = params.require(:post).permit(:title, :raw_content, :slug, :tag_list)
+      result = params.require(:post).permit(:title, :raw_content, :slug, :tag_list, :cover)
       result[:html_content] = GitHub::Markdown.render_gfm(result[:raw_content]).html_safe
       result
     end

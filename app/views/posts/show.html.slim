@@ -1,4 +1,6 @@
-div.col-lg-9
+div.col-lg-9.post-show
+  = image_tag @post.cover.url if @post.cover.identifier
+
   h1.page-header = @post.title
 
   div.post-content
