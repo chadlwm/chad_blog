@@ -1,7 +1,12 @@
 div.col-lg-9.post-show
-  = image_tag @post.cover.url if @post.cover.identifier
+  = image_tag @post.cover.url if @post.cover.to_s.present?
 
-  h1.page-header = @post.title
+  header.single-post-header__meta
+    .single-post__postmeta
+      a href="#" #{@post.author.try(:email)}
+      |&nbsp;•&nbsp;
+      = smart_time_ago(@post.created_at)
+    h1.single-post__title = raw(@post.title)
 
   div.post-content
     = raw @post.html_content

@@ -11,7 +11,7 @@
   = f.input :slug, input_html:{ class: 'form-control' }
 
   = f.input :raw_content, wrapper_html:{style: 'display:none'}
-  div#postEditor = "# Hi, Techer Man\r\nchad"
+  div#postEditor = convert_raw_content @post.raw_content
 
   = f.input :tag_list, hint: 'tag list with separator of “,” ', input_html:{ class: 'form-control' }
 

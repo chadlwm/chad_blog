@@ -55,10 +55,7 @@ html lang="en"
                 = link_to "退出", destroy_user_session_path, method: :delete, class: 'inline-block'
 
     div.container
-      div.row
-        p.notice = notice
-        p.alert = alert
-
+      div.row style="margin-top:10px;"
         = yield
           
       footer
