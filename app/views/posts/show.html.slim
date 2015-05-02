@@ -13,5 +13,7 @@ div.col-lg-9.post-show
 
   = link_to 'Edit', edit_admin_post_path(@post)
 
+  = render 'comments'
+  
 div.col-lg-3
   = render 'tags'
