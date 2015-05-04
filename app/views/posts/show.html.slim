@@ -11,7 +11,8 @@ div.col-lg-9.post-show
   div.post-content
     = raw @post.html_content
 
-  = link_to 'Edit', edit_admin_post_path(@post)
+  - if can? :edit, @post
+    = link_to 'Edit', edit_admin_post_path(@post)
 
   = render 'comments'
   

@@ -15,13 +15,19 @@
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
+#  role                   :string(255)
 #
 
 class User < ActiveRecord::Base
+   extend Enumerize
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  enumerize :role, :in => Settings.roles, :default => :reader, :methods => true, :scopes => :shallow
+
   has_many :posts
+
 end

@@ -37,6 +37,7 @@ GEM
     bootstrap-on-rails (3.3.1)
       less-rails
     builder (3.2.2)
+    cancancan (1.8.4)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -58,8 +59,12 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    enumerize (0.11.0)
+      activesupport (>= 3.2)
     erubis (2.7.0)
     execjs (2.5.0)
+    fume-cancan (0.0.4)
+      rails
     fume-settable (0.0.3)
       activesupport (>= 3.0)
       hashie
@@ -183,9 +188,12 @@ DEPENDENCIES
   acts-as-taggable-on
   annotate
   bootstrap-on-rails
+  cancancan
   carrierwave
   coffee-rails (~> 4.0.0)
   devise
+  enumerize
+  fume-cancan
   fume-settable
   github-markdown
   jbuilder (~> 2.0)

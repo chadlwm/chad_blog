@@ -1,4 +1,5 @@
 class Admin::ColumnsController < Admin::BaseController
+  load_and_authorize_resource
   before_action :set_column, only: [:show, :edit, :update, :destroy]
 
   respond_to :html

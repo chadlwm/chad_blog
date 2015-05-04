@@ -1,4 +1,5 @@
 class Admin::PostsController < Admin::BaseController
+  load_and_authorize_resource
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index

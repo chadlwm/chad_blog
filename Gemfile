@@ -15,25 +15,28 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem "less-rails"
-gem 'bootstrap-on-rails'
+gem 'less-rails'
 gem 'github-markdown'
 gem 'devise'
-gem 'slim-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 
 #model
-gem "acts-as-taggable-on"
+gem 'acts-as-taggable-on'
+gem 'cancancan'
+gem 'fume-cancan'
+gem 'enumerize'
 
 # views
-gem "simple_form"
+gem 'bootstrap-on-rails'
+gem 'slim-rails'
+gem 'simple_form'
 
 group :development, :test do
   gem 'pry-nav', '~> 0.2.4'
-  gem "pry-doc"
-  gem "quiet_assets"
-  gem "annotate"
+  gem 'pry-doc'
+  gem 'quiet_assets'
+  gem 'annotate'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
