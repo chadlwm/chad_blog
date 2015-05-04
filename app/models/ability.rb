@@ -38,6 +38,7 @@ class Ability
 
   # 作者
   def writer(user)
+    can :read, :dashboard
     can [:read, :reviewings], Post
     can :manage, Post, :user_id => user.id
   end

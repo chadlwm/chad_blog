@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
-  root 'posts#index'
-
   namespace :admin, path: '/admin' do
-    root to: redirect('/admin/posts')
+    get 'dashboard/index'
+    root to: redirect('admin/dashboard/index')
     resources :images
     resources :columns do
       resources :posts
@@ -15,6 +14,7 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { sessions: "users/sessions" }, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
 
+  root 'posts#index'
   resources :posts
   resources :tags
 

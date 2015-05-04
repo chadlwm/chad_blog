@@ -19,6 +19,7 @@ class Admin::PostsController < Admin::BaseController
 
   def create
     @post = Post.new(post_params)
+    @post.author = current_user
 
     respond_to do |format|
       if @post.save
@@ -46,7 +47,7 @@ class Admin::PostsController < Admin::BaseController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -61,7 +62,7 @@ class Admin::PostsController < Admin::BaseController
     end
 
     def post_params
-      result = params.require(:post).permit(:title, :raw_content, :slug, :tag_list, :cover)
+      result = params.require(:post).permit(:title, :raw_content, :slug, :tag_list, :cover, :column_id)
       result[:html_content] = GitHub::Markdown.render_gfm(result[:raw_content]).html_safe
       result
     end

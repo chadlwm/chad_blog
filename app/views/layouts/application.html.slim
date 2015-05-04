@@ -55,6 +55,9 @@ html lang="en"
                   = current_user.email
                   span.caret
                 ul class="dropdown-menu" role="menu"
+                  - if can? :read, :dashboard
+                    li
+                      = link_to "进入后台", admin_root_path
                   li
                     = link_to "注销登录", destroy_user_session_path, method: :delete
             - else
