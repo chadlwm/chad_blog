@@ -3,7 +3,7 @@ div.col-lg-9.post-show
 
   header.single-post-header__meta
     .single-post__postmeta
-      a href="#" #{@post.author.try(:email)}
+      a href="#" #{ @post.author.display_name }
       |&nbsp;•&nbsp;
       = smart_time_ago(@post.created_at)
     h1.single-post__title = raw(@post.title)
@@ -13,6 +13,8 @@ div.col-lg-9.post-show
 
   - if can? :edit, @post
     = link_to 'Edit', edit_admin_post_path(@post)
+
+  = render 'footer'
 
   = render 'comments'
   

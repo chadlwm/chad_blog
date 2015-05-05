@@ -1,0 +1,14 @@
+tr
+  td = image_tag user.avatar.url, style: "width:25px; height:25px;"
+  td = user.id
+  td = user.name
+  td = user.email
+  td = smart_time_ago user.created_at
+  td 
+    - if can? :edit, user
+      = link_to edit_admin_user_path(user) do
+        i.glyphicon.glyphicon-pencil
+      |&nbsp;&nbsp;
+    - if can? :destroy, user
+      = link_to [:admin, user], method: :delete do
+        i.glyphicon.glyphicon-remove

@@ -16,6 +16,9 @@
 #  created_at             :datetime
 #  updated_at             :datetime
 #  role                   :string(255)
+#  name                   :string(255)
+#  avatar                 :string(255)
+#  introduce              :text
 #
 
 require 'test_helper'

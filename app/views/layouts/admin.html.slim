@@ -51,13 +51,16 @@ html lang="en"
             - if can? :read, Post
               li class="#{ nav_active :posts, controller_name }"
                 = link_to "Posts", admin_posts_path
+            - if can? :read, Post
+              li class="#{ nav_active :users, controller_name }"
+                = link_to "Users", admin_users_path
             li
               = link_to "主页", root_path
 
           ul.nav.nav-list style="float:right;"
             - if current_user
               li
-                = link_to current_user.email, "/#", class: 'inline-block'
+                = link_to current_user.display_name, "/#", class: 'inline-block'
                 ||
                 = link_to "退出", destroy_user_session_path, method: :delete, class: 'inline-block'
 

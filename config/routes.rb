@@ -10,13 +10,16 @@ Rails.application.routes.draw do
     resources :posts, except: [:show] do
       post :convert, on: :collection
     end
+    resources :users
   end
 
   devise_for :users, controllers: { sessions: "users/sessions" }, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
 
   root 'posts#index'
-  resources :posts
+  resources :posts, only: [:index, :show], param: :slug
   resources :tags
+  resources :users, only:[:show], param: :name
+  resources :columns, only:[:show], param: :slug
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

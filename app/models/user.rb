@@ -16,18 +16,29 @@
 #  created_at             :datetime
 #  updated_at             :datetime
 #  role                   :string(255)
+#  name                   :string(255)
+#  avatar                 :string(255)
+#  introduce              :text
 #
 
 class User < ActiveRecord::Base
-   extend Enumerize
+  extend Enumerize
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates_uniqueness_of :name
+
   enumerize :role, :in => Settings.roles, :default => :reader, :methods => true, :scopes => :shallow
 
   has_many :posts
+
+  mount_uploader :avatar, ImageUploader
+
+  def display_name
+  	name || email
+  end
 
 end

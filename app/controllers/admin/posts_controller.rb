@@ -4,7 +4,7 @@ class Admin::PostsController < Admin::BaseController
 
   def index
     @posts = Column.find(params[:column_id]).posts rescue Post
-    @posts = @posts.order("created_at desc")
+    @posts = @posts.includes(:column, :author).order("created_at desc")
   end
 
   def show

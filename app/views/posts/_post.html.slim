@@ -1,0 +1,20 @@
+article.post.column-info
+  div.top-info
+    div.top.left
+      span
+        = link_to "/columns/#{post.column.try(:slug)}", class: "#{post.column.try(:slug)}" do
+          = "#{post.column.try(:name)}"
+        = " / #{post.column.try(:slug)}"
+    div.top.right
+      = link_to post.author.try(:display_name) || '佚名', user_path(name: post.author.try(:name))
+      |&nbsp;•&nbsp;
+      = smart_time_ago post.created_at
+  div.left-col
+    div.left.left-col
+      div.thumb-180
+        = link_to post, class: "info_flow_news_image" do
+          = image_tag post.cover.url
+  div.right-col
+    h1
+      = link_to raw(post.title), post_path(slug: post.slug), target: "_blank", class: "info_flow_news_title"
+    p = '再也不相信爱情了！自己过好就好了！'
