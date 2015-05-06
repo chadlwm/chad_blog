@@ -69,11 +69,7 @@ html lang="en"
                 = link_to '登录', new_user_session_path
 
     = yield
-    
-    div.container
-      footer
-        p
-          |&copy; Company 2015
+    = render 'layouts/footer'
 
 javascript:
   $(document).ready(function(ret, status){
