@@ -25,15 +25,19 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Process files as they are uploaded:
-  process :resize_to_fit => [1024, 206]
+  process :resize_to_fit => [1024, 768]
   #
   # def scale(width, height)
   #    do something
   # end
 
   # Create different versions of your uploaded files:
-  version :thumb do
+  version :avatar do
     process :resize_to_fit => [50, 50]
+  end
+
+  version :thumb do
+    process :resize_to_fit => [180, 120]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

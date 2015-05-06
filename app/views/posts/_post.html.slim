@@ -13,8 +13,8 @@ article.post.column-info
     div.left.left-col
       div.thumb-180
         = link_to post_path(slug: post.slug), class: "info_flow_news_image" do
-          = image_tag post.cover.url
+          = image_tag post.cover.thumb.url if post.cover.thumb.url.present?
   div.right-col
     h1
       = link_to raw(post.title), post_path(slug: post.slug), target: "_blank", class: "info_flow_news_title"
-    p = post.summary
+    p.summary = post.summary
