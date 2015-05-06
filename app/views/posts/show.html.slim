@@ -1,22 +1,33 @@
-div.col-lg-9.post-show
-  = image_tag @post.cover.url if @post.cover.to_s.present?
+div.container
+  div.rows style="margin-top:10px;"
+    div.col-lg-12
 
-  header.single-post-header__meta
-    .single-post__postmeta
-      a href="#" #{ @post.author.display_name }
-      |&nbsp;•&nbsp;
-      = smart_time_ago(@post.created_at)
-    h1.single-post__title = raw(@post.title)
+      div.col-lg-9.post-show
+        = image_tag @post.cover.url if @post.cover.to_s.present?
 
-  div.post-content
-    = raw @post.html_content
+        header.single-post-header__meta
+          .single-post__postmeta
+            a href="#" #{ @post.author.display_name }
+            |&nbsp;•&nbsp;
+            = smart_time_ago(@post.created_at)
+          h1.single-post__title = raw(@post.title)
 
-  - if can? :edit, @post
-    = link_to 'Edit', edit_admin_post_path(@post)
+        div.post-content
+          = raw @post.html_content
 
-  = render 'footer'
+        div
+          - @post.tag_list.each do |tag|
+            span style="margin: 0 5px;"
+              i.glyphicon.glyphicon-tag
+              |&nbsp;
+              = link_to tag, tag_path(tag)
+        div style="margin-top:20px;"
+          - if can? :edit, @post
+            = link_to 'Edit', edit_admin_post_path(@post)
 
-  = render 'comments'
-  
-div.col-lg-3
-  = render 'tags'
+        = render 'footer'
+
+        = render 'comments'
+        
+      div.col-lg-3
+        = render 'tags'
