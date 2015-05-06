@@ -12,6 +12,7 @@
 #  column_id    :integer
 #  slug         :string(255)
 #  cover        :string(255)
+#  summary      :text
 #
 
 class Post < ActiveRecord::Base

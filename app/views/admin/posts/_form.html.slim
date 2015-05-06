@@ -13,6 +13,8 @@
   = f.input :raw_content, wrapper_html:{style: 'display:none'}
   div#postEditor = convert_raw_content @post.raw_content
 
+  = f.input :summary, input_html:{ class: 'form-control' }
+
   = f.input :tag_list, hint: 'tag list with separator of “,” ', input_html:{ class: 'form-control' }
 
   = f.input :column_id, label: "Column", collection: Column.order('id asc').map{|column| [column.name, column.id]}, selected: @post.column_id, input_html:{ class: 'form-control' }

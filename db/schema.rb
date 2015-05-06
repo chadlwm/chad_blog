@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150504125312) do
+ActiveRecord::Schema.define(version: 20150506031829) do
 
   create_table "columns", force: true do |t|
     t.string   "name"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20150504125312) do
     t.integer  "column_id"
     t.string   "slug"
     t.string   "cover"
+    t.text     "summary"
   end
 
   create_table "taggings", force: true do |t|

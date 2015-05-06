@@ -1,6 +1,5 @@
 class Admin::PostsController < Admin::BaseController
   load_and_authorize_resource
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
     @posts = Column.find(params[:column_id]).posts rescue Post
@@ -35,7 +34,7 @@ class Admin::PostsController < Admin::BaseController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        format.html { redirect_to post_path(slug: @post.slug), notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }
@@ -57,12 +56,8 @@ class Admin::PostsController < Admin::BaseController
   end
 
   private
-    def set_post
-      @post = Post.find(params[:id])
-    end
-
     def post_params
-      result = params.require(:post).permit(:title, :raw_content, :slug, :tag_list, :cover, :column_id)
+      result = params.require(:post).permit(:title, :raw_content, :slug, :tag_list, :cover, :column_id, :summary)
       result[:html_content] = GitHub::Markdown.render_gfm(result[:raw_content]).html_safe
       result
     end

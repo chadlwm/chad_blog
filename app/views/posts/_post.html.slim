@@ -12,9 +12,9 @@ article.post.column-info
   div.left-col
     div.left.left-col
       div.thumb-180
-        = link_to post, class: "info_flow_news_image" do
+        = link_to post_path(slug: post.slug), class: "info_flow_news_image" do
           = image_tag post.cover.url
   div.right-col
     h1
       = link_to raw(post.title), post_path(slug: post.slug), target: "_blank", class: "info_flow_news_title"
-    p = '再也不相信爱情了！自己过好就好了！'
+    p = post.summary
