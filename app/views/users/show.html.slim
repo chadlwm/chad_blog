@@ -1,6 +1,20 @@
-div.col-lg-9
-  div.articles
-    = render @posts
+div
+  div.container
+    footer.post-footer
+      figure.author-image
+        a.img href="#{user_path(name: @user.name)}" style="background-image: url(#{@user.avatar.url})"
+      .author-info
+        h3
+          = link_to @user.display_name, user_path(name: @user.name)
+        p.autho-bio  = @user.introduce
 
-div.col-lg-3
-  = render 'posts/tags'
+div.container
+  div.rows style="margin-top:10px;"
+    div.col-lg-12
+
+      div.col-lg-9
+        div.articles
+          = render @posts
+
+      div.col-lg-3
+        = render 'posts/tags'

@@ -68,11 +68,9 @@ html lang="en"
               li
                 = link_to '登录', new_user_session_path
 
+    = yield
+    
     div.container
-      div.rows style="margin-top:10px;"
-        div.col-lg-12
-          = yield
-          
       footer
         p
           |&copy; Company 2015

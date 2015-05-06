@@ -1,6 +1,15 @@
-div.col-lg-9
-  div.articles
-    = render @posts
+div.bs-docs-header#content
+  div.container
+    h1 Tech Man Blog
+    p Tech Man 是一个的技术博客， Enjoy Your Time!
 
-div.col-lg-3
-  = render 'posts/tags'
+div.container
+  div.rows style="margin-top:10px;"
+    div.col-lg-12
+    
+      div.col-lg-9
+        div.articles
+          = render @posts
+
+      div.col-lg-3
+        = render 'posts/tags'

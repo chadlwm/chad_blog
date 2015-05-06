@@ -1,7 +1,7 @@
 footer.post-footer
   figure.author-image
-    a.img href="/author/wangsai/" style="background-image: url(#{@post.author.avatar.url})"
+    a.img href="#{user_path(name: @post.author.name)}" style="background-image: url(#{@post.author.avatar.url})"
   .author-info
     h3
-      = link_to @post.author.display_name, '#'
+      = link_to @post.author.display_name, user_path(name: @post.author.name)
     p.autho-bio  = @post.author.introduce

@@ -107,3 +107,51 @@
     }
   }
 }
+
+
+footer.post-footer {
+  position: relative;
+  margin: 6rem 0 2rem 0;
+  padding: 3rem 0 2rem 0;
+  border-bottom: #EBF2F6 1px solid;
+  text-align: center;
+}
+footer{
+  .author-image{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    overflow: hidden;
+    padding: 6px;
+    background: #fff;
+    z-index: 2;
+    -webkit-box-shadow: #E7EEF2 0 0 0 1px;
+    box-shadow: #E7EEF2 0 0 0 1px;
+  }
+
+  .author-image .img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 100%;
+  }
+
+  .author-info{
+  }
+
+  .author-info h3 a{
+    color: #343e49;
+  }
+}
