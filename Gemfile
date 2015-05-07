@@ -26,6 +26,7 @@ gem 'acts-as-taggable-on'
 gem 'cancancan'
 gem 'fume-cancan'
 gem 'enumerize'
+gem 'harmonious_dictionary'
 
 # views
 gem 'bootstrap-on-rails'

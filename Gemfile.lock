@@ -71,6 +71,7 @@ GEM
       activesupport (>= 3.0)
       hashie
     github-markdown (0.6.8)
+    harmonious_dictionary (0.0.1)
     hashie (3.3.2)
     hike (1.2.3)
     i18n (0.7.0)
@@ -199,6 +200,7 @@ DEPENDENCIES
   fume-cancan
   fume-settable
   github-markdown
+  harmonious_dictionary
   jbuilder (~> 2.0)
   jquery-rails
   less-rails
