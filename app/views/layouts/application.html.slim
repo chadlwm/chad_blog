@@ -56,6 +56,9 @@ html lang="en"
                   |&nbsp;
                   span.caret
                 ul class="dropdown-menu" role="menu"
+                  - if can? :new, Post
+                    li
+                      = link_to "撰写文章", new_admin_post_path, target: '_blank'
                   - if can? :read, :dashboard
                     li
                       = link_to "进入后台", admin_root_path, target: '_blank'
