@@ -9,4 +9,5 @@
 1. 【新增】 为`POST`添加[table content](http://projects.jga.me/toc/)
 1. 【新增】 添加`google analyzer`
 1. 【新增】 为`POST`添加浏览次数
+1. 【新增】 添加`TAG`显示页面
 

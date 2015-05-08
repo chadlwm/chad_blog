@@ -16,7 +16,7 @@
 //= require bootstrap/tab
 //= require bootstrap/transition
 
-//= require ./ace/ace
+/////require ./ace/ace
 //= require bootstrap-markdown-editor
 //= require prism.js
 //= require ./timeago/timeago
