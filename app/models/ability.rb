@@ -23,7 +23,6 @@ class Ability
   # 管理界面权限
   def admin_page_ability(user)
     return unless user
-
     can [:edit, :update], User, :id => user.id
     send user.role.to_sym, user
   end
