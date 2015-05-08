@@ -20,6 +20,7 @@ gem 'github-markdown'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'pg'
 
 #model
 gem 'acts-as-taggable-on'

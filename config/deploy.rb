@@ -39,6 +39,7 @@ namespace :deploy do
   task :setup_config do
     on roles(:web) do |host|
       execute :mkdir, "-p #{deploy_to}/shared/config"
+    end
   end
 
   desc "Restart application"
@@ -60,5 +61,4 @@ namespace :deploy do
   end
 
   after "deploy:migrate", "deploy:updated"
-  after :finishing, 'deploy:cleanup'
 end
