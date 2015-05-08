@@ -17,10 +17,10 @@ Rails.application.routes.draw do
 
   root 'posts#index'
   resources :posts, only: [:index, :show], param: :slug
-  resources :tags
   resources :users, only:[:show], param: :name
   resources :columns, only:[:show], param: :slug
 
+  match '/tag/:tag' => 'tags#show', via: :get, as: :tag
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
