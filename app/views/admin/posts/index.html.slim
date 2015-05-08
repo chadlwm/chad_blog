@@ -5,16 +5,18 @@ table.table.table-hover
     tr
       th Title
       th Column
-      th Created_At
+      th CreatedAt
+      th ViewsCount
       th operations
       th Author
 
   tbody
     - @posts.each do |post|
       tr
-        td = link_to post.title, post, target: '_blank'
+        td = link_to post.title, post_path(slug: post.slug), target: '_blank'
         td = link_to post.column.try(:name), admin_column_posts_path(column_id: post.column.try(:id))
         td = smart_time_ago post.created_at
+        td = post.views_count
         td
           = link_to edit_admin_post_path(post) do
             i.glyphicon.glyphicon-pencil

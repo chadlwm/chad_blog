@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
   def show
   	@post = Post.find_by_slug(params[:slug])
+  	@post.increase_views_count
   	@tags = Post.tag_counts_on(:tags)
   end
 

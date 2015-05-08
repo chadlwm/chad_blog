@@ -13,6 +13,7 @@
 #  slug         :string(255)
 #  cover        :string(255)
 #  summary      :text
+#  views_count  :integer          default(0)
 #
 
 class Post < ActiveRecord::Base
@@ -24,4 +25,8 @@ class Post < ActiveRecord::Base
 
   acts_as_taggable
   mount_uploader :cover, ImageUploader
+
+  def increase_views_count
+  	self.update_column(:views_count, self.views_count.next)
+  end
 end

@@ -13,6 +13,7 @@
 #  slug         :string(255)
 #  cover        :string(255)
 #  summary      :text
+#  views_count  :integer          default(0)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
