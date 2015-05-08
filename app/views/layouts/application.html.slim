@@ -58,10 +58,10 @@ html lang="en"
                 ul class="dropdown-menu" role="menu"
                   - if can? :read, :dashboard
                     li
-                      = link_to "进入后台", admin_root_path
+                      = link_to "进入后台", admin_root_path, target: '_blank'
                   - if can? :edit, current_user
                     li
-                      = link_to "我的账号", edit_admin_user_path(current_user)
+                      = link_to "我的账号", edit_admin_user_path(current_user), target: '_blank'
                   li
                     = link_to "注销登录", destroy_user_session_path, method: :delete
             - else

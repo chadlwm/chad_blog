@@ -55,7 +55,7 @@ html lang="en"
               li class="#{ nav_active :users, controller_name }"
                 = link_to "Users", admin_users_path
             li
-              = link_to "主页", root_path
+              = link_to "主页", root_path, target: '_blank'
 
           ul.nav.nav-list style="float:right;"
             - if current_user
