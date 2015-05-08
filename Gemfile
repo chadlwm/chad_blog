@@ -21,6 +21,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'pg'
+gem 'rb-readline'
 
 #model
 gem 'acts-as-taggable-on'
