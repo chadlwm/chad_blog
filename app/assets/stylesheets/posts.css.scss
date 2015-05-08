@@ -7,8 +7,35 @@
     width: 100%;
   }
 
-  .single-post__postmeta{
-    margin-top: 10px;
+  header{
+    .single-post__postmeta{
+      margin-top: 10px;
+    }
+
+    h1{
+      font-size: 3rem;
+      line-height: 1.5;
+      color: #38485a;
+      margin: 10px 0 5px 0;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+      background: transparent;
+    }
+  }
+
+  .post-content{
+    h1, .h1 {
+      font-size: 3rem;
+      border-bottom: 2px solid;
+      padding-bottom: 10px;
+    }
+    h2, .h2 {
+      font-size: 2.5rem;
+    }
+    h3, .h3 {
+      font-size: 2rem;
+    }
   }
 
   footer.post-footer {
