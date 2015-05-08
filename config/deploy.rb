@@ -5,7 +5,7 @@ set :repo_url, 'git@example.com:me/my_repo.git'
 
 set :scm, :git
 set :repo_url, 'https://github.com/chadlwm/chad_blog.git'
-set :deploy_to, "~/apps/blog"
+set :deploy_to, "/home/chad/apps/blog"
 set :rails_env, 'production'
 set :ssh_options, { keys: %w{~/.ssh/id_rsa}, forward_agent: true, auth_methods: %w(publickey) }
 
