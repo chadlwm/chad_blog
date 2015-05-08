@@ -1,0 +1,23 @@
+div.sidebar-nav style="margin-bottom: 20px;"
+  h3 Page Nav
+  div.sidebar-list#table-content
+
+javascript:
+  $('#table-content').toc({
+    'selectors': 'h1,h2,h3',
+    'container': '.post-content',
+    'smoothScrolling': true,
+    'prefix': 'toc',
+    'onHighlight': function(el) {},
+    'highlightOnScroll': true,
+    'highlightOffset': 100,
+    'anchorName': function(i, heading, prefix) {
+        return prefix+i;
+    },
+    'headerText': function(i, heading, $heading) {
+        return $heading.text();
+    },
+		'itemClass': function(i, heading, $heading, prefix) {
+		  return 'toc-'+$heading[0].tagName.toLowerCase();
+		}
+  });

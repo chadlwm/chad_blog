@@ -28,10 +28,8 @@
 //= require bootstrap/tab
 //= require bootstrap/transition
 
+//= require ./ace/ace
+//= require bootstrap-markdown-editor
 //= require prism.js
 //= require ./timeago/timeago
 //= require ./timeago/timeago.zh-cn
-
-//table content
-//= require toc
-

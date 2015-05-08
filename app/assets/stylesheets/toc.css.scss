@@ -1,0 +1,33 @@
+#table-content{
+  width: 100%;
+  font-size: 16px;
+
+  ul {
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
+    list-style: square;
+
+    li {
+      padding: 5px 0;
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+      display: block;
+    }
+  }
+
+  .toc-h2 {
+    margin-left: 20px;
+  }
+
+  .toc-h3 {
+    margin-left: 40px;
+  }
+
+  .toc-active {
+    /*border-left: solid 4px #336699;*/
+  }
+}
