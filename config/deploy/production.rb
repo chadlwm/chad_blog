@@ -8,4 +8,4 @@ server_ip = `echo $BLOG_SERVER`.chomp
 server_port = `echo $BLOG_PORT`.chomp.to_i
 server_user = `echo $BLOG_USER`.chomp
 
-server server_ip, user: server_user, roles: %w{web app}, port: server_port
+server server_ip, user: server_user, roles: %w{web app db}, port: server_port
