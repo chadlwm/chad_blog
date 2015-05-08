@@ -23,7 +23,7 @@ div.container
               = link_to tag, tag_path(tag)
         div style="margin-top:20px;"
           - if can? :edit, @post
-            = link_to 'Edit', edit_admin_post_path(@post)
+            = link_to 'Edit', edit_admin_post_path(@post), target: 'new'
 
         = render 'footer'
 
