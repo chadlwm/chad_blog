@@ -34,6 +34,7 @@ gem 'harmonious_dictionary'
 gem 'bootstrap-on-rails'
 gem 'slim-rails'
 gem 'simple_form'
+gem 'cells'
 
 group :development, :test do
   gem 'pry-nav', '~> 0.2.4'

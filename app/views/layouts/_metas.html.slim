@@ -1,0 +1,15 @@
+- content_for :metas do
+  /!twitter meta
+  meta content="@#{@site_name}" name="twitter:site"
+  meta content="summary" name="twitter:card"
+  meta content="#{@title}" name="twitter:title"
+  meta content="#{@description}" name="twitter:description"
+  meta content="#{@avatar}" name="twitter:image:src"
+
+  /!og meta
+  meta content="#{@site_name}" property="og:site_name"
+  meta content="post" property="og:type"
+  meta content="#{@avatar}" property="og:image"
+  meta content="#{@title}" property="og:title"
+  meta content="#{@url}" property="og:url"
+  meta content="#{@description}" property="og:description"
