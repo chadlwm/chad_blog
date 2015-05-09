@@ -32,10 +32,12 @@ module ApplicationHelper
   end
 
   def render_metas(args = {})
+    binding.pry
     @title = args[:title] || Settings.site.title
     @description = args[:description] || Settings.site.description
     @url = args[:url] || Settings.site.url
     @avatar = args[:avatar] || Settings.site.avatar
+    @avatar = "http://#{request.server_name}#{@avatar}" unless @avatar.start_with?('http://')
     @site_name = Settings.site.title
 
     render 'layouts/metas'
