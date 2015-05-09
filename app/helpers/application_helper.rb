@@ -35,7 +35,7 @@ module ApplicationHelper
     @title = args[:title] || Settings.site.title
     @description = args[:description] || Settings.site.description
     @url = args[:url] || Settings.site.url
-    @avatar = Settings.site.avatar
+    @avatar = args[:avatar] || Settings.site.avatar
     @site_name = Settings.site.title
 
     render 'layouts/metas'
