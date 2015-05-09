@@ -22,18 +22,22 @@ body {
 
 .post-content{
   blockquote{
-    padding: 20px;
-    margin: 20px 0;
-    border: 1px solid #eee;
+    padding: 10px;
+    margin: 10px 0;
     border-left-width: 5px;
     border-radius: 3px;
     border-left-color: #1b809e;
+    background-color: #efefef;
   }
 
   p, ol, ul{
     font-size: 16px;
     line-height: 1.75;
     margin-bottom: 1em;
+  }
+
+  ol, ul{
+    margin-left: -15px;
   }
 
   pre[class*='language-'] > code[data-language] {
