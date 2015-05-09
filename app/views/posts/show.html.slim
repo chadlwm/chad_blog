@@ -7,7 +7,7 @@ div.container
 
         header.single-post-header__meta
           .single-post__postmeta
-            a href="#" #{ @post.author.display_name }
+            a href="#{user_path(name: @post.author.name)}" #{ @post.author.display_name }
             |&nbsp;•&nbsp;
             = smart_time_ago(@post.created_at)
           h1.single-post__title = raw(@post.title)
