@@ -32,7 +32,6 @@ module ApplicationHelper
   end
 
   def render_metas(args = {})
-    binding.pry
     @title = args[:title] || Settings.site.title
     @description = args[:description] || Settings.site.description
     @url = args[:url] || Settings.site.url
