@@ -52,7 +52,7 @@ html lang="en"
             - if can? :read, Post
               li class="#{ nav_active :posts, controller_name }"
                 = link_to "Posts", admin_posts_path
-            - if can? :read, Post
+            - if can? :read, User
               li class="#{ nav_active :users, controller_name }"
                 = link_to "Users", admin_users_path
             li
