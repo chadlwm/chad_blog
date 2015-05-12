@@ -27,6 +27,7 @@
 .post-show{
   img{
     width: 100%;
+    max-height: 450px !important;
   }
 
   header{
@@ -135,7 +136,7 @@
     }
     .thumb-180 img{
       width: 60;
-      heigth: 40px;
+      height: 40px !important;
     }
     article{
       min-height: 70px;
@@ -156,7 +157,7 @@
     }
     .thumb-180 img{
       width: 100;
-      heigth: 66px;
+      height: 66px !important;
     }
     article{
       min-height: 120px;
@@ -177,7 +178,7 @@
     }
     .thumb-180 img{
       width: 180px;
-      heigth: 120px;
+      height: 120px !important;
     }
     article{
       min-height: 200px;
