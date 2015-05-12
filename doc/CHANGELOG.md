@@ -3,7 +3,7 @@
 # 2015-05-09
 
 1. 【新增】 添加友情链接
-1. 【新增】 添加 [og](http://ogp.me/) 和 [twitter](https://twitter.com/) meta信息
+1. 【新增】 添加 [og](http://ogp.me/) 和 [twitter](https://dev.twitter.com/cards/overview) meta信息
 1. 【优化】 页面样式和手机自适应调整
 
 # 2015-05-08
