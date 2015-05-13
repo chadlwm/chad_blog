@@ -1,0 +1,11 @@
+section.sidebar-nav
+  h3 热门文章
+  
+  div.sidebar-list.hot-posts
+    - @posts.each do |post|
+      article
+        div.left
+          = link_to post_path(slug: post.slug) do
+            = image_tag post.cover.small_thumb.url
+        h1
+          = link_to  post.title , post_path(slug: post.slug), target: '_new'
