@@ -1,0 +1,24 @@
+/* humanstxt.org */
+
+/* TEAM */
+
+  Name: Techer Man
+  Site: http://www.techer.info
+  Designer: @chad
+  Developer: @chad
+  Contact: chad_lwm@hotmail.com
+  Emal: chad_lwm@hotmail.com
+  Wechat: chad_lwm
+  Location: Beijing, China
+
+
+/* SITE */
+
+  Development Tools:
+  Sublime Text, Mac, Postgres, Elasticseach, Nginx, Passenger, Centos7
+
+  Server:
+  Amazon S3, Amazon CloudFront, CloudFlare, V2EDGE
+
+  Last Updated:
+  2015/05/14 19:30 PM
