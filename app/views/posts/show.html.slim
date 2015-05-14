@@ -1,3 +1,5 @@
+= content_for :title, @post.title
+
 = render_metas title: @post.title, description: @post.summary, url: post_url(slug: @post.slug), avatar: @post.cover.big_thumb.url || @post.author.avatar.small_thumb.url
 
 div.container

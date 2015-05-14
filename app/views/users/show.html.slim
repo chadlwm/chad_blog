@@ -1,3 +1,4 @@
+= content_for :title, @user.name
 = render_metas title: @user.name, description: @user.introduce, url: user_url(name: @user.name), avatar: @user.avatar.url
 
 div

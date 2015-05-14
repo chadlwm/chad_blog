@@ -1,3 +1,4 @@
+= content_for :title, @column.name
 = render_metas title: @column.name, description: @column.introduce, url: column_url(slug: @column.slug)
 
 div.bs-docs-header#content

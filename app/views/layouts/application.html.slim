@@ -4,14 +4,14 @@ html lang="en"
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
-    title = content_for?(:title) ? yield(:title) : Settings.site.title
+    title = content_for?(:title) ? "#{yield(:title)} | #{Settings.site.title}" : Settings.site.title
     = csrf_meta_tags
 
     meta name="renderer" content="webkit"
     = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
 
     meta name="author" content="@chad_lwm"
-    meta name="description" content="#{settings.site.description}"
+    meta name="description" content="#{Settings.site.description}"
     meta name="keywords" content="techer, techerman, techer man, blog"
     link rel="author" href="/humans.txt"
     
