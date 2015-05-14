@@ -1,28 +1,32 @@
-== README
+# Chad's Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+hi, this is my blog source code,
 
-Things you may want to cover:
+the blog link : [http://www.techer.info](http://www.techer.info)
 
-* Ruby version
+## Blog description
 
-* System dependencies
+> **Tech Man Blog**
+> Tech Man 是一个的技术博客， Enjoy Your Time!
 
-* Configuration
+so, welcome to my [Blog](http://www.techer.info)
 
-* Database creation
+![chad](http://techer.info/uploads/user/avatar/1/avatar92.jpg =60x60)
 
-* Database initialization
+# Code introduce
 
-* How to run the test suite
+this code is a ruby on rails source code, to make it run, you can do as follows:
 
-* Services (job queues, cache servers, search engines, etc.)
+1. ruby 1.2.*, rails
+1. rails 4.*
+1. postgres
+1. bundle install
+1. rake db:migrate
+1. rake db:seed
+1. rails s
 
-* Deployment instructions
+enjoy your time!
 
-* ...
+# Contact
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Any question, please mail to [chad_lwm@hotmail.com](chad_lwm@hotmail.com)
