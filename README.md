@@ -12,7 +12,7 @@ the blog link : [http://www.techer.info](http://www.techer.info)
 
 so, welcome to my [Blog](http://www.techer.info)
 
-![chad](http://techer.info/uploads/user/avatar/1/avatar92.jpg =60x60)
+![](http://techer.info/uploads/user/avatar/1/small_thumb_avatar92.jpg)
 
 # Code introduce
 
