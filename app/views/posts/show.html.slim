@@ -1,4 +1,4 @@
-= render_metas title: @post.title, description: @post.summary, url: post_url(slug: @post.slug), avatar: @post.author.avatar.big_thumb.url
+= render_metas title: @post.title, description: @post.summary, url: post_url(slug: @post.slug), avatar: @post.cover.big_thumb.url || @post.author.avatar.small_thumb.url
 
 div.container
   div.rows style="margin-top:10px;"
