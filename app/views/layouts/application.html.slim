@@ -43,7 +43,9 @@ html lang="en"
 
     = stylesheet_link_tag "application", :media => "all"
     = javascript_include_tag "application"
+    = render 'layouts/newrelic_agent'
 
+  body
     header.navbar.navbar-static-top.navbar-inverse style="margin-bottom:0;"
       div.container
         button.navbar-toggle type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse"

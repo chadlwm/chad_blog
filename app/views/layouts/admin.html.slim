@@ -36,7 +36,9 @@ html lang="en"
     = stylesheet_link_tag "application", :media => "all"
     script src="/ace/ace.js"
     = javascript_include_tag "admin"
+    = render 'layouts/newrelic_agent'
 
+  body
     header.nnavbar.navbar-static-top.navbar-inverse
       div.container
         button.navbar-toggle type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse"
