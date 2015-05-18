@@ -2,7 +2,7 @@
 
 # 2015-05-18
 
-1. 【新增】 newrelic browser agent
+1. 【新增】 newrelic monitor
 
 # 2015-05-14
 
