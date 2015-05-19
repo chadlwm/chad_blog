@@ -26,6 +26,9 @@ class Post < ActiveRecord::Base
   acts_as_taggable
   mount_uploader :cover, ImageUploader
 
+  scope :related,    -> { includes(:author, :column) }
+  scope :recent,    -> { order('created_at desc') }
+
   def increase_views_count
   	self.update_column(:views_count, self.views_count.next)
   end
