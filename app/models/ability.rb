@@ -29,7 +29,7 @@ class Ability
 
   # 未登录
   def anonymous
-    can [:read, :preview], Post
+    can [:read, :preview, :site_map], Post
   end
 
   def reader(user)

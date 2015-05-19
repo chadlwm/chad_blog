@@ -13,6 +13,7 @@ class PostsController < ApplicationController
 
   def site_map
   	@posts = Post.related.recent
+  	response.headers['content-type'] = 'application/xml'
   end
 
 end
