@@ -6,18 +6,6 @@
       <lastmod><%= post.created_at.strftime("%F") %></lastmod>
       <changefreq>always</changefreq>
       <priority>1.0</priority>
-      <data>
-         <display>
-            <originality>1</originality>
-            <title><%= post.title %></title>
-            <release_time><%= post.created_at.strftime("%F %T") %></release_time>
-            <source>http://www.techer.info/</source>
-            <source_name>Techer Man</source_name>
-            <category><%= post.column.try(:name) %></category>
-            <author><%= post.author.try(:name) %></author>
-            <image><%= "http://www.techer.info#{post.cover.thumb.url}" %></image>>
-         </display>
-      </data>
     </url>
   <% end %>
 </urlset>
