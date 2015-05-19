@@ -6,7 +6,8 @@ class PostsController < ApplicationController
   end
 
   def show
-  	@post = Post.find_by_slug(params[:slug])
+  	#error when not found
+  	@post = Post.find_by_slug!(params[:slug])
   	@post.increase_views_count
   end
 
