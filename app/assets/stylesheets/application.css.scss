@@ -20,6 +20,10 @@ body {
   color: #333;
 }
 
+*{
+  word-wrap: break-word;
+}
+
 .post-content{
   blockquote{
     padding: 5px;

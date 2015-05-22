@@ -149,6 +149,12 @@
     .right-col .summary{
       display: none;
     }
+
+    h1{
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
   }
 
   @media(min-width:480px) and (max-width: 768px){ 
@@ -170,6 +176,12 @@
     .right-col .summary{
       display: none;
     }
+
+    h1{
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
   }
  
   @media(min-width: 768px){
@@ -188,6 +200,12 @@
     .right-col {
       margin-left: 200px;
     }
+
+    h1{
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
   }
 
   .right-col {
@@ -196,13 +214,6 @@
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-
-    h1{
-      margin-top: 0;
-      margin-bottom: 20px;
-      font-size: 20px;
-      font-size: 2rem;
-    }
   }
 }
 
