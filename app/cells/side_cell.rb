@@ -9,4 +9,8 @@ class SideCell < Cell::Rails
   	@posts = Post.order(views_count: :desc).limit(6)
   	render
   end
+
+  def search
+  	render
+  end
 end
