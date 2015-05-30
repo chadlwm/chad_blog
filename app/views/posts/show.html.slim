@@ -38,3 +38,8 @@ div.container
         .search-placeholder
         = render_cell :side, :tags_cloud
         = render_cell :side, :hot_posts
+
+javascript:
+  $(document).ready(function(){
+    $(".post-content a").attr("target", '_blank');
+  });
