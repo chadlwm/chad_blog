@@ -1,0 +1,27 @@
+<xml>
+  <ToUserName><![CDATA[<%= @xml['FromUserName'] %>]]></ToUserName>
+  <FromUserName><![CDATA[<%= @xml['ToUserName'] %>]]></FromUserName>
+  <CreateTime><%= Time.now.to_i %></CreateTime>
+  <MsgType><![CDATA[news]]></MsgType>
+  <ArticleCount>3</ArticleCount>
+  <Articles>
+    <item>
+      <Title><![CDATA[投票：评选最美养生方式]]></Title> 
+      <Description><![CDATA[养生，幸福一生！]]></Description>
+      <PicUrl><![CDATA[http://www.techer.info/uploads/post/cover/10/%E5%81%B6%E9%81%87.jpg]]></PicUrl>
+      <Url><![CDATA[http://techer.info/posts/ctrip-data-lose-and-downtime-warning]]></Url>
+    </item>
+    <item>
+      <Title><![CDATA[携程数据丢失、宕机给我们带来的警示]]></Title> 
+      <Description><![CDATA[安全重于泰山，数据高于一切！]]></Description>
+      <PicUrl><![CDATA[http://www.techer.info/uploads/post/cover/7/thumb_2703bf1cb0d94e509b3d7318c3d70a6e.jpg]]></PicUrl>
+      <Url><![CDATA[http://techer.info/posts/ctrip-data-lose-and-downtime-warning]]></Url>
+    </item>
+    <item>
+      <Title><![CDATA[网站添加 google 自定义搜索功能]]></Title>
+      <Description><![CDATA[快速实现搜索功能]]></Description>
+      <PicUrl><![CDATA[http://techer.info/uploads/post/cover/15/thumb_google-custom-search-box-cse.gif]]></PicUrl>
+      <Url><![CDATA[http://techer.info/posts/google-cse]]></Url>
+    </item>
+  </Articles>
+</xml> 

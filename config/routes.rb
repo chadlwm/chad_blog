@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   resources :users, only:[:show], param: :name
   resources :columns, only:[:show], param: :slug
 
+  get '/wechat' => 'wechat#index'
+  post '/wechat' => 'wechat#message'
+
   match '/tag/:tag' => 'tags#show', via: :get, as: :tag
   match '/site_map.:format' => 'posts#site_map', via: :get, constraints: { format: 'xml' }, as: :site_map
 
